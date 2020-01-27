@@ -1,0 +1,22 @@
+<h1>Experts</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Name</th>
+      <th scope="col">Site</th>
+      <th scope="col">Friends</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @experts.each do |expert| %>
+      <tr>
+        <td><%= expert.email %></td>
+        <td><%= expert.name %></td>
+        <td><%= expert.shortened_url %></td>
+        <td><%= expert.friends.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
